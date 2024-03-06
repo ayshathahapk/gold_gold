@@ -10,6 +10,12 @@ class More extends StatefulWidget {
 class _MoreState extends State<More> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Center(
+        child: Text(
+          "More page",style: TextStyle(fontSize: 10),
+        ),
+      ),
+    );
   }
 }

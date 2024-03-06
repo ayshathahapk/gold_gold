@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gold_gold/feature/home/home.dart';
+import 'package:gold_gold/feature/home/more.dart';
 import '../home/profile.dart';
+import '../home/alert.dart';
+import '../home/sport.dart';
 
 class Bottom_page extends StatefulWidget {
   Bottom_page({super.key});
@@ -13,17 +17,18 @@ class _Bottom_pageState extends State<Bottom_page> {
   int _currentIndex = 0;
 
   List<Widget> _pages = [
-    profile(),
-    profile(),
-    profile(),
-    profile(),
-    profile(),
+    Home(),
+    Alert(),
+    Profile(),
+    Sport(),
+    More(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
+      child:
+      Scaffold(
         body: _pages[_currentIndex],
         bottomNavigationBar: Theme(
             data: Theme.of(context).copyWith(
@@ -75,7 +80,7 @@ class _Bottom_pageState extends State<Bottom_page> {
                 ),
               ],
             )),
-      ),
+      )
     );
   }
 }
