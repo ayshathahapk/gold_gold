@@ -4,28 +4,26 @@ import 'package:flutter/material.dart';
 import 'feature/bottom_bar/bottum_page.dart';
 import 'firebase_options.dart';
 
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          bottomNavigationBarTheme: BottomNavigationBarThemeData(backgroundColor: Colors.lime),
-          // backgroundColor: Colors.white,
-          primarySwatch: Colors.blue,
-        ),
-        home:  Bottom_page(),
-      );
-
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        bottomNavigationBarTheme:
+            const BottomNavigationBarThemeData(backgroundColor: Colors.lime),
+        // backgroundColor: Colors.white,
+        primarySwatch: Colors.blue,
+      ),
+      home: Bottom_page(),
+    );
   }
 }
-

@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "gold-606ac"
-  }
+  },
+  "targets": {
+    "gold-606ac": {
+      "hosting": {
+        "gold-site": [
+          "gold-site"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
