@@ -10,8 +10,12 @@ class Alert extends StatefulWidget {
 class _AlertState extends State<Alert> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-
+    return Scaffold(
+      body: Center(
+        child: Text(
+          "Alert page",style: TextStyle(fontSize: 10),
+        ),
+      ),
     );
   }
 }
